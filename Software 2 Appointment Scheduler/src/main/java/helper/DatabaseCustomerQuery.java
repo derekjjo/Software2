@@ -59,7 +59,7 @@ public abstract class DatabaseCustomerQuery {
             customerList.add(c);
         }
         return customerList;
-//        CustomerTable.setItems(customerList);
+
     }
 
 }

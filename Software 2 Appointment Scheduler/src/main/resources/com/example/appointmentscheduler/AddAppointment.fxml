@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="662.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.AddAppointment">
+<AnchorPane prefHeight="662.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.AddAppointmentController">
    <children>
       <Label layoutX="121.0" layoutY="75.0" text="Add Appointment">
          <font>

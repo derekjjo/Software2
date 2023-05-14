@@ -13,31 +13,15 @@ import java.sql.SQLException;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("Mainview.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("loginview.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        stage.setTitle("Scheduling Software");
         stage.setScene(scene);
         stage.show();
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args){
         JDBC.openConnection();
-//        int rowsAffected = DatabaseCustomerQuery.insert("John bon", "134 dog lane","12234","script",1);
-//
-//        if(rowsAffected > 0) {
-//            System.out.println("SUCCESS BIOTCH");
-//        }
-//        else{
-//            System.out.println("sorry bro");
-//        }
-//
-//        int rows = DatabaseCustomerQuery.delete(5);
-//        if (rows == 1){
-//            System.out.println("dude");
-//        }
-//        JDBC.closeConnection();
-
-
         launch();
 
 

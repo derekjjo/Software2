@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="662.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.AddAppointment">
+<AnchorPane prefHeight="662.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.ModifyAppointmentController">
     <children>
         <Label layoutX="87.0" layoutY="76.0" text="Modify Appointment">
             <font>
@@ -21,13 +21,13 @@
             </font>
         </TextField>
         <Label layoutX="102.0" layoutY="187.0" opacity="0.5" text="Appointment ID" />
-        <TextField fx:id="addName" layoutX="195.0" layoutY="223.0" />
+        <TextField fx:id="modifyName" layoutX="195.0" layoutY="223.0" />
         <Label layoutX="102.0" layoutY="227.0" text="Title" />
-        <TextField fx:id="addInv" layoutX="195.0" layoutY="254.0" />
+        <TextField fx:id="description" layoutX="195.0" layoutY="254.0" />
         <Label layoutX="102.0" layoutY="259.0" text="Description" />
-        <TextField fx:id="addPrice" layoutX="195.0" layoutY="285.0" />
+        <TextField fx:id="location" layoutX="195.0" layoutY="285.0" />
         <Label layoutX="102.0" layoutY="290.0" text="Location" />
-        <TextField fx:id="addMax" layoutX="195.0" layoutY="317.0" />
+        <TextField fx:id="type" layoutX="195.0" layoutY="317.0" />
         <Label layoutX="102.0" layoutY="322.0" text="Type" />
         <Button layoutX="383.0" layoutY="563.0" mnemonicParsing="false" onAction="#addPartButton" text="Save" />
         <Button layoutX="447.0" layoutY="563.0" mnemonicParsing="false" onAction="#toMain" text="Cancel" />

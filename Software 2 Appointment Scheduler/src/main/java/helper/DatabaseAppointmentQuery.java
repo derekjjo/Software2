@@ -64,7 +64,7 @@ public abstract class DatabaseAppointmentQuery {
             appointmentList.add(a);
         }
         return appointmentList;
-//        CustomerTable.setItems(customerList);
+
     }
 
 }
