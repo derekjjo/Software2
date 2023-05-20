@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="806.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.ReportController">
+    <children>
+        <TableView fx:id="appointmentTable" layoutX="64.0" layoutY="141.0" prefHeight="177.0" prefWidth="885.0">
+            <columns>
+                <TableColumn fx:id="appointmentID" prefWidth="55.0" text="Appt ID" />
+                <TableColumn fx:id="title" prefWidth="139.0" text="Title" />
+                <TableColumn fx:id="description" prefWidth="184.0" text="Description" />
+                <TableColumn fx:id="type" prefWidth="112.0" text="Type" />
+                <TableColumn fx:id="startTime" prefWidth="149.0" text="Start TIme" />
+                <TableColumn fx:id="endTime" prefWidth="147.0" text="End Time" />
+                <TableColumn fx:id="customerID" prefWidth="98.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <Label layoutX="618.0" layoutY="109.0" prefHeight="19.0" prefWidth="181.0" text="Schedule by Contact ID:">
+            <font>
+                <Font name="Avenir Next Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="64.0" layoutY="99.0" text="Appointments Schedules ">
+            <font>
+                <Font name="Avenir Next Bold" size="27.0" />
+            </font>
+        </Label>
+        <Button layoutX="749.0" layoutY="717.0" mnemonicParsing="false" onAction="#logout" prefHeight="75.0" prefWidth="200.0" text="Logout" />
+        <TableView fx:id="appTypeTable" layoutX="55.0" layoutY="399.0" prefHeight="230.0" prefWidth="404.0">
+            <columns>
+                <TableColumn fx:id="Count" prefWidth="81.0" text="Count " />
+                <TableColumn fx:id="Type" prefWidth="194.0" text="Type" />
+                <TableColumn fx:id="Month" prefWidth="133.0" text="Month" />
+                <TableColumn fx:id="phone" prefWidth="138.0" text="Phone" />
+                <TableColumn fx:id="divisionID" prefWidth="68.0" text="Division ID" />
+            </columns>
+        </TableView>
+        <Label layoutX="54.0" layoutY="354.0" prefHeight="39.0" prefWidth="404.0" text="Appointment Count by Type and Month">
+            <font>
+                <Font name="Avenir Next Bold" size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="397.0" layoutY="14.0" text="REPORTS">
+            <font>
+                <Font name="Avenir Next Bold" size="45.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="contactIDNumber" layoutX="783.0" layoutY="106.0" onAction="#changeContactID" prefWidth="150.0" />
+      <ComboBox fx:id="monthCombo" layoutX="181.0" layoutY="640.0" onAction="#changeMonth" prefWidth="150.0" />
+      <Label layoutX="127.0" layoutY="643.0" text="Month:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="537.0" layoutY="717.0" mnemonicParsing="false" onAction="#toMain" prefHeight="75.0" prefWidth="200.0" text="Back" />
+      <TableView fx:id="createdTable" layoutX="548.0" layoutY="399.0" prefHeight="230.0" prefWidth="404.0">
+         <columns>
+            <TableColumn fx:id="countCreated" prefWidth="199.0" text="Count " />
+            <TableColumn fx:id="monthCreated" prefWidth="204.0" text="Month" />
+         </columns>
+      </TableView>
+      <Label layoutX="548.0" layoutY="354.0" prefHeight="39.0" prefWidth="404.0" text="Appointments Created By Month">
+         <font>
+            <Font name="Avenir Next Bold" size="19.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

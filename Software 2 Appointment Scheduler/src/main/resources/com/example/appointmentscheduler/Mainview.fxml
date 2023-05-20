@@ -24,7 +24,7 @@
             <TableColumn fx:id="userID" prefWidth="93.0" text="User ID" />
         </columns>
       </TableView>
-      <RadioButton fx:id="viewAllRB" layoutX="769.0" layoutY="180.0" mnemonicParsing="false" selected="true" text="All">
+      <RadioButton fx:id="viewAllRB" layoutX="769.0" layoutY="180.0" mnemonicParsing="false" onAction="#appointmentAllRBPressed" selected="true" text="All">
          <toggleGroup>
             <ToggleGroup fx:id="AppointmentsBY" />
          </toggleGroup></RadioButton>
@@ -33,25 +33,25 @@
             <Font name="Avenir Next Bold" size="13.0" />
          </font>
       </Label>
-      <RadioButton fx:id="viewWeekRB" layoutX="888.0" layoutY="180.0" mnemonicParsing="false" selected="true" text="Week" toggleGroup="$AppointmentsBY" />
-      <RadioButton fx:id="viewMonthRB" layoutX="820.0" layoutY="180.0" mnemonicParsing="false" text="Month" toggleGroup="$AppointmentsBY" />
+      <RadioButton fx:id="viewWeekRB" layoutX="888.0" layoutY="180.0" mnemonicParsing="false" onAction="#appointmentWeekRBPressed" text="Week" toggleGroup="$AppointmentsBY" />
+      <RadioButton fx:id="viewMonthRB" layoutX="820.0" layoutY="180.0" mnemonicParsing="false" onAction="#appointmentMonthRBPressed" text="Month" toggleGroup="$AppointmentsBY" />
       <Label layoutX="58.0" layoutY="177.0" text="Appointments">
          <font>
             <Font name="Avenir Next Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="793.0" layoutY="403.0" mnemonicParsing="false" prefWidth="150.0" text="Delete Appointment" />
+      <Button layoutX="793.0" layoutY="403.0" mnemonicParsing="false" onAction="#deleteAppointmentButton" prefWidth="150.0" text="Delete Appointment" />
       <Button layoutX="58.0" layoutY="403.0" mnemonicParsing="false" onAction="#addAppointmentButtonPushed" prefWidth="150.0" text="Add Appointment" />
       <Button layoutX="425.0" layoutY="403.0" mnemonicParsing="false" onAction="#modifyAppointmentButtonPushed" prefWidth="150.0" text="Modify Appointment" />
-      <Button layoutX="733.0" layoutY="651.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="200.0" text="Logout" />
-      <Button layoutX="733.0" layoutY="553.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="200.0" text="View Reports" />
+      <Button layoutX="733.0" layoutY="651.0" mnemonicParsing="false" onAction="#logout" prefHeight="75.0" prefWidth="200.0" text="Logout" />
+      <Button layoutX="733.0" layoutY="553.0" mnemonicParsing="false" onAction="#viewReportsButton" prefHeight="75.0" prefWidth="200.0" text="View Reports" />
       <TableView fx:id="customerTable" layoutX="58.0" layoutY="513.0" prefHeight="230.0" prefWidth="615.0">
          <columns>
-            <TableColumn fx:id="customerIDcustomer" prefWidth="79.0" text="Customer ID" />
-            <TableColumn fx:id="customerName" prefWidth="74.0" text="Name" />
-            <TableColumn fx:id="address" prefWidth="99.0" text="Address" />
-            <TableColumn fx:id="phone" prefWidth="170.0" text="Phone" />
-            <TableColumn fx:id="divisionID" prefWidth="192.0" text="Division ID" />
+            <TableColumn fx:id="customerIDcustomer" prefWidth="81.0" text="Customer ID" />
+            <TableColumn fx:id="customerName" prefWidth="194.0" text="Name" />
+            <TableColumn fx:id="address" prefWidth="133.0" text="Address" />
+            <TableColumn fx:id="phone" prefWidth="138.0" text="Phone" />
+            <TableColumn fx:id="divisionID" prefWidth="68.0" text="Division ID" />
          </columns>
       </TableView>
       <Label layoutX="58.0" layoutY="474.0" text="Customers">
@@ -64,8 +64,8 @@
             <Font name="Avenir Next Bold" size="45.0" />
          </font>
       </Label>
-      <Button layoutX="523.0" layoutY="752.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Delete Customer" />
-      <Button layoutX="58.0" layoutY="752.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="Add Customer" />
-      <Button layoutX="291.0" layoutY="752.0" mnemonicParsing="false" prefWidth="150.0" text="Modify Customer" />
+      <Button layoutX="523.0" layoutY="752.0" mnemonicParsing="false" onAction="#deleteCustomerButton" prefHeight="26.0" prefWidth="150.0" text="Delete Customer" />
+      <Button layoutX="58.0" layoutY="752.0" mnemonicParsing="false" onAction="#addCustomerButtonPushed" prefHeight="26.0" prefWidth="150.0" text="Add Customer" />
+      <Button layoutX="291.0" layoutY="752.0" mnemonicParsing="false" onAction="#modifyCustomerButtonPushed" prefWidth="150.0" text="Modify Customer" />
    </children>
 </AnchorPane>

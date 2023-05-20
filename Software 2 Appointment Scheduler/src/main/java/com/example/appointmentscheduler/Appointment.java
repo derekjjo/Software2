@@ -1,5 +1,8 @@
 package com.example.appointmentscheduler;
 
+import helper.DatabaseAppointmentQuery;
+
+import java.sql.SQLException;
 import java.sql.Time;
 
 public class Appointment {
@@ -8,14 +11,18 @@ public class Appointment {
     private String location;
     private int contact;
     private String type;
+    private String description;
     private String startTime;
     private String endTime;
     private int customerID;
     private int userID;
 
-    public Appointment(int appointmentID, String title, String location, int contact, String type, String startTime, String endTime, int customerID, int userID) {
+
+
+    public Appointment(int appointmentID, String title, String description, String location, int contact, String type, String startTime, String endTime, int customerID, int userID) {
         this.appointmentID = appointmentID;
         this.title = title;
+        this.description = description;
         this.location = location;
         this.contact = contact;
         this.type = type;
@@ -25,6 +32,9 @@ public class Appointment {
         this.userID = userID;
     }
 
+    public String getDescription() {
+        return description;
+    }
     public int getAppointmentID() {
         return appointmentID;
     }

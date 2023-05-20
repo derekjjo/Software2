@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="416.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.AddAppointment">
+<AnchorPane prefHeight="506.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentscheduler.ModifyCustomerController">
     <children>
-        <Label layoutX="165.0" layoutY="71.0" text="Add Customer">
+        <Label layoutX="130.0" layoutY="74.0" text="Modify Customer">
             <font>
                 <Font name="Avenir Next Bold" size="35.0" />
             </font>
         </Label>
-        <TextField editable="false" layoutX="195.0" layoutY="182.0" opacity="0.5" promptText="Auto Gen-Disabled">
+        <TextField fx:id="customerID" editable="false" layoutX="195.0" layoutY="182.0" opacity="0.5" promptText="Auto Gen-Disabled">
             <font>
                 <Font name="System Italic" size="13.0" />
             </font>
@@ -23,15 +22,17 @@
         <Label layoutX="102.0" layoutY="187.0" opacity="0.5" text="ID" />
         <TextField fx:id="addName" layoutX="195.0" layoutY="223.0" />
         <Label layoutX="102.0" layoutY="227.0" text="Name" />
-        <TextField fx:id="addInv" layoutX="195.0" layoutY="254.0" />
+        <TextField fx:id="addAddress" layoutX="195.0" layoutY="254.0" />
         <Label layoutX="102.0" layoutY="259.0" text="Address" />
-        <TextField fx:id="addPrice" layoutX="195.0" layoutY="285.0" />
+        <TextField fx:id="addPostal" layoutX="195.0" layoutY="285.0" />
         <Label layoutX="102.0" layoutY="290.0" text="Postal Code" />
-        <TextField fx:id="addMax" layoutX="195.0" layoutY="317.0" />
+        <TextField fx:id="addPhone" layoutX="195.0" layoutY="317.0" />
         <Label layoutX="102.0" layoutY="322.0" text="Phone Number" />
         <Label fx:id="addPartToggleLabel" layoutX="102.0" layoutY="354.0" text="Country" />
-        <Button layoutX="388.0" layoutY="371.0" mnemonicParsing="false" onAction="#addPartButton" text="Save" />
+        <Button layoutX="388.0" layoutY="371.0" mnemonicParsing="false" onAction="#modifyCustomerButton" text="Save" />
         <Button layoutX="449.0" layoutY="371.0" mnemonicParsing="false" onAction="#toMain" text="Cancel" />
-        <ComboBox layoutX="196.0" layoutY="351.0" prefHeight="26.0" prefWidth="160.0" />
+        <ComboBox fx:id="addCountry" layoutX="196.0" layoutY="351.0" onAction="#getDivisions" prefHeight="26.0" prefWidth="160.0" />
+        <Label fx:id="addPartToggleLabel1" layoutX="103.0" layoutY="388.0" text="Division" />
+        <ComboBox fx:id="division" layoutX="197.0" layoutY="385.0" prefHeight="26.0" prefWidth="160.0" />
     </children>
 </AnchorPane>
